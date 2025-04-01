@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciMulus Club - {{title}}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Additional CSS -->
+    {{additional_css}}
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+                <span class="sci">Sci</span><span class="mul">Mul</span><span class="us">Us</span> <span class="club">Club</span>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <div></div>
+                </span>
+            </button>
+            
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {{home_active}}" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{about_active}}" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{team_active}}" href="executive-team.html">Executive Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{members_active}}" href="members.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{announcements_active}}" href="announcements.html">Announcements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{store_active}}" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{contact_active}}" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile-only Social Icons -->
+                <div class="navbar-socials">
+                    <a href="https://www.instagram.com/scimulus/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61574540592622" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitch.tv/scimuluslive" target="_blank"><i class="fab fa-twitch"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {{content}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About SciMulus Column -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-about">
+                        <div class="footer-logo mb-3 text-center text-md-start">
+                            <span class="sci">Sci</span><span class="mul">Mul</span><span class="us">Us</span> <span class="club">Club</span>
+                        </div>
+                        <p class="footer-slogan mb-4 text-center text-md-start">
+                            <em>"Science, Media, and Collaboration — For Everyone, With Everyone."</em>
+                        </p>
+                        
+                        <div class="footer-values">
+                            <div class="value-item">
+                                <div class="value-icon science-value">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="science-text">Science:</strong> Sci for Science – promoting literacy and curiosity.
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon stimulate-value">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="stimulate-text">Stimulate:</strong> Driving exploration and motivation.
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon us-value">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="us-text">Us:</strong> Building a passionate student community.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 offset-lg-1">
+                    <div class="footer-links">
+                        <h5 class="text-center text-md-start">Quick Links</h5>
+                        <ul class="footer-nav text-center text-md-start">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="executive-team.html">Executive Team</a></li>
+                            <li><a href="members.html">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Resources & Social Media Column -->
+                <div class="col-lg-3 col-md-6 offset-lg-1">
+                    <div class="footer-resources mb-4">
+                        <h5 class="text-center text-md-start">Resources</h5>
+                        <ul class="footer-nav text-center text-md-start">
+                            <li><a href="announcements.html">Announcements</a></li>
+                            <li><a href="store.html">Club Store</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-social-container">
+                        <h5 class="text-center">Connect With Us</h5>
+                        <div class="footer-social-icons">
+                            <a href="https://www.instagram.com/scimulus/" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@scimulusofficial" target="_blank" rel="noopener noreferrer" class="social-icon tiktok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@SciMulusClub" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.twitch.tv/scimuluslive" target="_blank" rel="noopener noreferrer" class="social-icon twitch">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                            <a href="https://web.facebook.com/profile.php?id=61574540592622" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://linktr.ee/scimulus" target="_blank" rel="noopener noreferrer" class="social-icon link">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-divider mt-4"></div>
+            <div class="footer-copyright">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> SciMulus Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Additional Scripts -->
+    {{additional_scripts}}
+</body>
+</html> 

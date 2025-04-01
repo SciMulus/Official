@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciMulus Club - Science, Media, and Collaboration</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+                <span class="sci">Sci</span><span class="mul">Mul</span><span class="us">Us</span> <span class="club">Club</span>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <div></div>
+                </span>
+            </button>
+            
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="executive-team.html">Executive Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="members.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="announcements.html">Announcements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile-only Social Icons -->
+                <div class="navbar-socials">
+                    <a href="https://www.instagram.com/scimulus/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61574540592622" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitch.tv/scimuluslive" target="_blank"><i class="fab fa-twitch"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <h1>Welcome to <span>Sci</span>Mulus <span class="highlight">Club</span></h1>
+                    <p>Science, Media, and Collaboration — For Everyone, With Everyone. Inspiring scientific curiosity and fostering a community of young scientists.</p>
+                    <div class="d-flex flex-wrap">
+                        <a href="about.html" class="btn btn-primary me-3 mb-2">Learn More</a>
+                        <a href="contact.html" class="btn btn-secondary mb-2">Join Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="400">
+                    <img src="images/scimulus-logo.jpg" class="img-fluid" alt="SciMulus Club">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="section bg-light" id="about-preview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>About SciMulus Club</h2>
+                    </div>
+                    <p data-aos="fade-up" data-aos-delay="200">
+                        SciMulus is a student-led club based at the Faculty of Sciences, Dhar El Mahraz (Fès), 
+                        under Université Sidi Mohamed Ben Abdellah. We combine science, media, and collaboration 
+                        to promote scientific culture and make knowledge accessible to everyone.
+                    </p>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        Our goal is to make science accessible and engaging through podcasts, livestreams, 
+                        creative workshops, and outreach projects, connecting students across disciplines 
+                        and encouraging innovation through hackathons, debates, and content creation.
+                    </p>
+                    <a href="about.html" class="btn btn-primary mt-3" data-aos="fade-up" data-aos-delay="400">Discover Our Story</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="feature-box text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h4>Science First</h4>
+                                <p>Committed to accessible education and promoting cross-disciplinary learning for all</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="feature-box text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>Stimulate Minds</h4>
+                                <p>Sparking creativity through debates, hackathons, and activities that encourage scientific curiosity</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="feature-box text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Build Community</h4>
+                                <p>Fostering interdisciplinary collaboration and creating an inclusive environment for all</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="feature-box text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <h4>Media Creation</h4>
+                                <p>Using podcasts, videos, and social media to make science fun, engaging, and relevant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section (Updated layout with consistent image placement) -->
+    <section class="section what-we-do" id="activities">
+      <div class="container text-center">
+        <h2 class="section-title text-center fw-bold mb-2" data-aos="fade-up">What We Do</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Our activities span across various areas to promote science and collaboration</p>
+
+        <div class="row justify-content-center text-start g-4">
+
+          <!-- Workshops & Training -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="fw-semibold">Workshops & Training</h4>
+            <p>We organize regular workshops and training sessions on both technical and soft skills. These include scientific techniques, software tools, research methods, science communication, and more...</p>
+            <img src="assets/images/workshops-training.png" alt="Workshops & Training" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-top: 15px;">
+          </div>
+
+          <!-- Research Projects -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="fw-semibold">Research Projects</h4>
+            <p>We facilitate collaborative research initiatives where members can work together on scientific projects. These range from small experiments to larger interdisciplinary investigations...</p>
+            <img src="assets/images/research-projects.png" alt="Research Projects" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-top: 15px;">
+          </div>
+
+          <!-- Science Communication -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <h4 class="fw-semibold">Science Communication</h4>
+            <p>We are passionate about making science accessible to everyone. Through our content creation team, we develop videos, podcasts, infographics, and articles that explain scientific concepts in clear, engaging ways...</p>
+            <img src="images/chatgpt-science-comm.png" alt="Science Communication" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-top: 15px;">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Preview Section -->
+    <section class="section bg-light" id="team-preview">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-center" data-aos="fade-up">Executive Team</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">The passionate students behind SciMulus Club</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member">
+                        <img src="images/president.jpg" alt="President" class="img-fluid">
+                        <div class="team-info">
+                            <h5>Abdellatif Nader</h5>
+                            <p class="position">President & Co-Founder</p>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/abdellatif-nader-a68b87353/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="team-member">
+                        <img src="assets/images/zineb-amrani.png" alt="Zerrifi Amrani Zineb" class="img-fluid">
+                        <div class="team-info">
+                            <h5>Zerrifi Amrani Zineb</h5>
+                            <p class="position">Vice President</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member">
+                        <img src="images/vice-president.jpg" alt="Secretary" class="img-fluid">
+                        <div class="team-info">
+                            <h5>Camara Amadou</h5>
+                            <p class="position">General Secretary</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-member">
+                        <img src="images/secretary.jpg" alt="Treasurer" class="img-fluid">
+                        <div class="team-info">
+                            <h5>Ahlame El HAYAL</h5>
+                            <p class="position">Treasurer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="team-member">
+                        <img src="assets/images/placeholder-profile.webp" alt="El Houssine AZERHOUNE" class="img-fluid">
+                        <div class="team-info">
+                            <h5>El Houssine AZERHOUNE</h5>
+                            <p class="position">Deputy Treasurer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="team-member">
+                        <img src="assets/images/placeholder-profile.webp" alt="Chaimae El Moukhafi" class="img-fluid">
+                        <div class="team-info">
+                            <h5>Chaimae El Moukhafi</h5>
+                            <p class="position">Deputy General Secretary</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="executive-team.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="600">View Full Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Announcements Preview -->
+    <section class="section" id="announcements-preview">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-center" data-aos="fade-up">Latest Announcements</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">Stay updated with our latest news and events</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="announcement-icon mb-4">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h5 class="card-title">No Announcements Available</h5>
+                            <p class="card-text">We currently don't have any announcements. Please stay tuned for upcoming news and events!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hidden until announcements are added -->
+            <div class="text-center mt-4" style="display: none;">
+                <a href="announcements.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="500">View All Announcements</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="section bg-dark text-white" id="join-cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 data-aos="fade-up">Join SciMulus Club Today</h2>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                        Become part of our vibrant community of science enthusiasts, 
+                        gain valuable skills, and contribute to exciting projects.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="300">Join Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About SciMulus Column -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-about">
+                        <div class="footer-logo mb-3 text-center text-md-start">
+                            <span class="sci">Sci</span><span class="mul">Mul</span><span class="us">Us</span> <span class="club">Club</span>
+                        </div>
+                        <p class="footer-slogan mb-4 text-center text-md-start">
+                            <em>"Science, Media, and Collaboration — For Everyone, With Everyone."</em>
+                        </p>
+                        
+                        <div class="footer-values">
+                            <div class="value-item">
+                                <div class="value-icon science-value">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="science-text">Science:</strong> Sci for Science – promoting literacy and curiosity.
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon stimulate-value">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="stimulate-text">Stimulate:</strong> Driving exploration and motivation.
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon us-value">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="us-text">Us:</strong> Building a passionate student community.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 offset-lg-1">
+                    <div class="footer-links">
+                        <h5 class="text-center text-md-start">Quick Links</h5>
+                        <ul class="footer-nav text-center text-md-start">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="executive-team.html">Executive Team</a></li>
+                            <li><a href="members.html">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Resources & Social Media Column -->
+                <div class="col-lg-3 col-md-6 offset-lg-1">
+                    <div class="footer-resources mb-4">
+                        <h5 class="text-center text-md-start">Resources</h5>
+                        <ul class="footer-nav text-center text-md-start">
+                            <li><a href="announcements.html">Announcements</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-social-container">
+                        <h5 class="text-center">Connect With Us</h5>
+                        <div class="footer-social-icons">
+                            <a href="https://www.instagram.com/scimulus/" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@scimulusofficial" target="_blank" rel="noopener noreferrer" class="social-icon tiktok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@SciMulusClub" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.twitch.tv/scimuluslive" target="_blank" rel="noopener noreferrer" class="social-icon twitch">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                            <a href="https://web.facebook.com/profile.php?id=61574540592622" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-divider mt-4"></div>
+            <div class="footer-copyright">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> SciMulus Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

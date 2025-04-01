@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciMulus Club - Contact Us</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Additional styles for this page */
+        .contact-card {
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .icon-box {
+            text-align: center;
+        }
+        
+        /* Updated form and map styles */
+        .map-container {
+            height: 400px;
+            margin-top: 0;
+        }
+        
+        .contact-form {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .contact-form form {
+            padding: 30px;
+        }
+        
+        .contact-form form .form-control {
+            background-color: #f8f9fa;
+            border: none;
+            height: 50px;
+            color: #333;
+            border-radius: 8px;
+            box-shadow: none;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        
+        .contact-form form textarea.form-control {
+            height: 150px;
+            resize: none;
+            padding: 15px;
+        }
+        
+        .contact-form form .form-control:focus {
+            background-color: #fff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+        
+        .contact-form form .btn-primary {
+            background: #00c4b3;
+            border-color: #00c4b3;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            border-radius: 8px;
+            width: 100%;
+            padding: 12px 0;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        
+        .contact-form form .btn-primary:hover {
+            background: #00b0a1;
+            border-color: #00b0a1;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 196, 179, 0.3);
+        }
+        
+        .contact-form form .btn-primary:disabled {
+            background: #00c4b3;
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        #contact-form-section {
+            padding: 60px 0;
+        }
+        
+        #contact-form-section .container {
+            max-width: 1140px;
+        }
+        
+        @media (max-width: 767px) {
+            .map-container {
+                height: 300px;
+                margin-top: 2rem;
+            }
+            
+            .contact-form form {
+                padding: 20px;
+            }
+        }
+        
+        /* Social media grid styles */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+            border-radius: 10px;
+            background-color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            color: var(--dark-gray);
+            text-decoration: none;
+        }
+        
+        .social-item span {
+            margin-top: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .social-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .social-item.instagram:hover {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            color: white;
+        }
+        
+        .social-item.tiktok:hover {
+            background: linear-gradient(90deg, #25F4EE, #FE2C55, #000000);
+            color: white;
+        }
+        
+        .social-item.youtube:hover {
+            background: #FF0000;
+            color: white;
+        }
+        
+        .social-item.facebook:hover {
+            background: #3b5998;
+            color: white;
+        }
+        
+        .social-item.twitch:hover {
+            background: #6441a5;
+            color: white;
+        }
+        
+        .social-item.linktree:hover {
+            background: #43e660;
+            color: white;
+        }
+        
+        /* Updated navbar toggler styles */
+        .navbar-toggler {
+            border: none;
+            background: transparent;
+            padding: 10px;
+            z-index: 9999;
+            display: block;
+        }
+        
+        .navbar-toggler-icon {
+            width: 30px;
+            height: 22px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon div {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler-icon::before {
+            top: 0;
+        }
+        
+        .navbar-toggler-icon div {
+            top: 10px;
+        }
+        
+        .navbar-toggler-icon::after {
+            bottom: 0;
+        }
+        
+        /* When menu is open */
+        .navbar-collapse.show ~ .navbar-toggler .navbar-toggler-icon::before {
+            transform: translateY(10px) rotate(45deg);
+        }
+        
+        .navbar-collapse.show ~ .navbar-toggler .navbar-toggler-icon div {
+            opacity: 0;
+        }
+        
+        .navbar-collapse.show ~ .navbar-toggler .navbar-toggler-icon::after {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+                <span class="sci">Sci</span><span class="mul">Mul</span><span class="us">Us</span> <span class="club">Club</span>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <div></div>
+                </span>
+            </button>
+            
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="executive-team.html">Executive Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="members.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="announcements.html">Announcements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile-only Social Icons -->
+                <div class="navbar-socials">
+                    <a href="https://www.instagram.com/scimulus/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@scimulusofficial" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@SciMulusClub" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitch.tv/scimuluslive" target="_blank"><i class="fab fa-twitch"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61574540592622" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 data-aos="fade-up">Contact Us</h1>
+                    <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section" id="contact-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="contact-card h-100 p-4 bg-light rounded shadow-sm" data-aos="fade-up">
+                        <div class="icon-box mb-4">
+                            <i class="fas fa-phone-alt feature-icon"></i>
+                        </div>
+                        <h4>Phone</h4>
+                        <p class="mb-0">
+                            Feel free to call us for general inquiries:
+                        </p>
+                        <a href="tel:+212602710549" class="text-primary fw-bold">+212 602 710 549</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="contact-card h-100 p-4 bg-light rounded shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box mb-4">
+                            <i class="fas fa-envelope feature-icon"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p class="mb-0">
+                            Send us an email and we'll get back to you:
+                        </p>
+                        <a href="mailto:contact.scimulus@gmail.com" class="text-primary fw-bold">contact.scimulus@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card h-100 p-4 bg-light rounded shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box mb-4">
+                            <i class="fas fa-map-marker-alt feature-icon"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p class="mb-0">
+                            Find us at the university campus:
+                        </p>
+                        <p class="text-primary fw-bold">Faculté des Sciences Dhar El Mahraz, Fès, Morocco</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section bg-light" id="contact-form-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 d-none d-md-flex">
+                <div class="col-lg-8 text-center">
+                    <div class="section-title text-center" data-aos="fade-up">
+                        <h2>Get In Touch</h2>
+                    </div>
+                    <p data-aos="fade-up" data-aos-delay="200">
+                        Have questions about our club, events, or want to get involved? 
+                        Send us a message and we'll respond as soon as possible.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="contact-form bg-white rounded shadow">
+                        <div id="formMessage" class="alert" style="display: none;"></div>
+                        <form action="https://formspree.io/f/xwplnjje" method="POST" onsubmit="handleSubmit(event)">
+                            <input type="hidden" name="_next" value="thank-you.html" />
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="map-container rounded shadow overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.4065305769113!2d-4.9794412238233186!3d34.03344151872219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b5f7be79403%3A0x64ed183ba63abde7!2sFaculty%20of%20Sciences%20Dhar%20El%20Mahraz%20(FSDM)!5e0!3m2!1sen!2sma!4v1743372557677!5m2!1sen!2sma" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">Find answers to common questions about SciMulus Club</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="accordion" id="contactFaq">
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How can I join SciMulus Club?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#contactFaq">
+                                <div class="accordion-body">
+                                    Joining SciMulus Club is easy! We accept new members at the beginning of each semester. 
+                                    Simply fill out the contact form on this page or send us an email expressing your interest. 
+                                    We'll send you information about our next recruitment meeting where you can learn more about 
+                                    the club and sign up officially.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Are there membership fees to join the club?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#contactFaq">
+                                <div class="accordion-body">
+                                    Yes, there is a small annual membership fee of 50 MAD that helps cover basic club 
+                                    expenses such as materials for workshops, event refreshments, and club merchandise. 
+                                    However, we never want financial constraints to prevent anyone from participating, 
+                                    so please contact us if you need assistance with the fee.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Do I need to be a science student to join?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#contactFaq">
+                                <div class="accordion-body">
+                                    Not at all! While SciMulus is based in the Faculty of Sciences, we welcome students 
+                                    from all academic backgrounds who are interested in science. We believe in interdisciplinary 
+                                    collaboration and value the diverse perspectives that students from different fields bring 
+                                    to scientific discussions and projects.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How can I collaborate with SciMulus Club?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#contactFaq">
+                                <div class="accordion-body">
+                                    We're always open to collaborations with other clubs, departments, organizations, 
+                                    and businesses! Whether you're interested in co-hosting an event, sponsoring a project, 
+                                    or any other form of partnership, please reach out to us via email at contact.scimulus@gmail.com 
+                                    with details about your collaboration proposal.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="section bg-light" id="social-media">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title text-center" data-aos="fade-up">Connect With Us</h2>
+                <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">Follow us on social media for the latest updates and content</p>
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-8">
+                        <div class="social-grid">
+                            <a href="https://www.instagram.com/scimulus/" target="_blank" rel="noopener noreferrer" class="social-item instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@scimulusofficial" target="_blank" rel="noopener noreferrer" class="social-item tiktok">
+                                <i class="fab fa-tiktok fa-2x"></i>
+                                <span>TikTok</span>
+                            </a>
+                            <a href="https://www.youtube.com/@SciMulusClub" target="_blank" rel="noopener noreferrer" class="social-item youtube">
+                                <i class="fab fa-youtube fa-2x"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://www.twitch.tv/scimuluslive" target="_blank" rel="noopener noreferrer" class="social-item twitch">
+                                <i class="fab fa-twitch fa-2x"></i>
+                                <span>Twitch</span>
+                            </a>
+                            <a href="https://web.facebook.com/profile.php?id=61574540592622" target="_blank" rel="noopener noreferrer" class="social-item facebook">
+                                <i class="fab fa-facebook-f fa-2x"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://linktr.ee/scimulus" target="_blank" rel="noopener noreferrer" class="social-item linktree">
+                                <i class="fas fa-link fa-2x"></i>
+                                <span>Linktree</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About SciMulus Column -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-about">
+                        <div class="footer-logo mb-3 text-center text-md-start">
+                            <span class="sci">Sci</span><span class="mul">Mul</span><span class="us">Us</span> <span class="club">Club</span>
+                        </div>
+                        <p class="footer-slogan mb-4 text-center text-md-start">
+                            <em>"Science, Media, and Collaboration — For Everyone, With Everyone."</em>
+                        </p>
+                        
+                        <div class="footer-values">
+                            <div class="value-item">
+                                <div class="value-icon science-value">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="science-text">Science:</strong> Sci for Science – promoting literacy and curiosity.
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon stimulate-value">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="stimulate-text">Stimulate:</strong> Driving exploration and motivation.
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon us-value">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="value-content">
+                                    <strong class="us-text">Us:</strong> Building a passionate student community.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 offset-lg-1">
+                    <div class="footer-links">
+                        <h5 class="text-center text-md-start">Quick Links</h5>
+                        <ul class="footer-nav text-center text-md-start">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="executive-team.html">Executive Team</a></li>
+                            <li><a href="members.html">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Resources & Social Media Column -->
+                <div class="col-lg-3 col-md-6 offset-lg-1">
+                    <div class="footer-resources mb-4">
+                        <h5 class="text-center text-md-start">Resources</h5>
+                        <ul class="footer-nav text-center text-md-start">
+                            <li><a href="announcements.html">Announcements</a></li>
+                            <li><a href="store.html">Club Store</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-social-container">
+                        <h5 class="text-center">Connect With Us</h5>
+                        <div class="footer-social-icons">
+                            <a href="https://www.instagram.com/scimulus/" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@scimulusofficial" target="_blank" rel="noopener noreferrer" class="social-icon tiktok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@SciMulusClub" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.twitch.tv/scimuluslive" target="_blank" rel="noopener noreferrer" class="social-icon twitch">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                            <a href="https://web.facebook.com/profile.php?id=61574540592622" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://linktr.ee/scimulus" target="_blank" rel="noopener noreferrer" class="social-icon link">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-divider mt-4"></div>
+            <div class="footer-copyright">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> SciMulus Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Font Awesome (for social icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        function handleSubmit(event) {
+            // Prevent the form from submitting immediately
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Disable button to prevent double submission
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+
+            // Show sending message
+            formMessage.className = 'alert alert-info';
+            formMessage.style.display = 'block';
+            formMessage.innerHTML = 'Sending your message...';
+
+            // Get the form
+            const form = event.target;
+            
+            // Submit the form data using fetch
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                return Promise.reject(response);
+            })
+            .then(data => {
+                // Success - redirect to thank you page
+                window.location.href = 'thank-you.html';
+            })
+            .catch(error => {
+                // Error - show error message
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+                formMessage.className = 'alert alert-danger';
+                formMessage.innerHTML = 'Something went wrong. Please try again later.';
+            });
+        }
+
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init();
+            }
+            
+            // Mobile navbar toggle
+            const toggler = document.querySelector(".navbar-toggler");
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            
+            if (toggler && navbarCollapse) {
+                toggler.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    navbarCollapse.classList.toggle('show');
+                    toggler.classList.toggle('active');
+                });
+                
+                // Close menu when clicking links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth < 992) {
+                            navbarCollapse.classList.remove('show');
+                            toggler.classList.remove('active');
+                        }
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (window.innerWidth < 992 && 
+                        !toggler.contains(e.target) && 
+                        !navbarCollapse.contains(e.target) && 
+                        navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                        toggler.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

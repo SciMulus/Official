@@ -1,0 +1,54 @@
+This is a placeholder file for the images directory.
+
+For a production deployment, place actual images in this directory with the following filenames that are referenced in the HTML files:
+
+1. scimulus-logo.jpg - Main SciMulus Club logo (currently being used on homepage)
+2. hero-image.png - Additional hero image for visual content
+3. favicon.ico - Website favicon
+4. about-story.jpg - Image for the about us page
+5. workshop-activity.jpg - Workshop activities image
+6. research-activity.jpg - Research activities image
+7. content-activity.jpg - Content creation image
+
+Team images:
+- president.jpg
+- vice-president.jpg
+- secretary.jpg
+- treasurer.jpg
+- events-coordinator.jpg
+- media-director.jpg
+- research-head.jpg
+- workshop-head.jpg
+- outreach-head.jpg
+- content-head.jpg
+- advisor1.jpg
+- advisor2.jpg
+
+Member images:
+- member1.jpg through member12.jpg
+
+Store product images:
+- store-tshirt.jpg
+- store-hoodie.jpg
+- store-tote.jpg
+- store-mug.jpg
+- store-notebook.jpg
+- store-pens.jpg
+- store-book.jpg
+- store-poster.jpg
+- custom-merch.jpg
+
+Activity images:
+- workshops.jpg
+- research.jpg
+- content.jpg
+- outreach.jpg
+- conferences.jpg
+- collaborations.jpg
+
+These images should be properly sized and optimized for web. Recommended sizes:
+- Hero images: 1920x1080px
+- Logo image: 800x600px
+- Team member photos: 400x400px (square)
+- Product images: 600x600px
+- Activity images: 800x600px 
